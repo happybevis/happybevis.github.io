@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Happybevis">
 <meta property="og:description" content="近来集中遇到不少user抱怨手机卡顿的case，能引起系统卡顿的原因可以成千上万，但最核心的起因通常避不开CPU被限制频率或多核CPU部分cpu被关核了。 本文将从几个工作中遇到的实际案例出发（只分析与CPU调控有关的案例），先尽可能地还原出完整的案发现场，再分析具体情况下CPU频率和核心的变化情况，最后和大家一起探索CPU之所以表现“异常”的原因和开发者设计思路。 案例分析总结大量User反馈和">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T04:51:05.471Z">
+<meta property="og:updated_time" content="2018-05-10T14:00:46.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机卡顿事件与Cpu频率大盗">
 <meta name="twitter:description" content="近来集中遇到不少user抱怨手机卡顿的case，能引起系统卡顿的原因可以成千上万，但最核心的起因通常避不开CPU被限制频率或多核CPU部分cpu被关核了。 本文将从几个工作中遇到的实际案例出发（只分析与CPU调控有关的案例），先尽可能地还原出完整的案发现场，再分析具体情况下CPU频率和核心的变化情况，最后和大家一起探索CPU之所以表现“异常”的原因和开发者设计思路。 案例分析总结大量User反馈和">
@@ -610,6 +610,7 @@
 <h3 id="Thermal-Management-In-UserSpace"><a href="#Thermal-Management-In-UserSpace" class="headerlink" title="Thermal Management In UserSpace"></a>Thermal Management In UserSpace</h3><p>User space中的Thermal管理，主要是通过Thermal-Engine完成，这部分相对以前没有任何改动，这部分资料很多，大家自行了解即可。</p>
 <p>但需要特别强调的是：新的Thermal-Core机制下，只有governor为userspace的Thermal Zone，才能保证在Thermal Zone达到trip值后，kernel部分只进行uevent的发送，而将完整的Thermal控制权转交给上层。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文从实际工作案例出发，介绍了工作中debug问题的思路和一些debug方法。同时还分析了BCL和Thermal Core的工作机制，目的是让大家能尽快对Thermal-Core框架快速上手，已达到举一反三的目的。</p>
+<p>版权声明：版权所有权属于HappyBevis，转载请注明出处，谢谢！</p>
 
       
     </div>
